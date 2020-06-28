@@ -1,0 +1,50 @@
+<div class="container mt-4">
+  <div class="row text-center">
+    <%= image_tag "ramsay#{rand(1..6)}.png", size: 350 %>
+  </div>
+
+  <div class="row text-center mt-1">
+    <h1><b>Gordon RamsAPI</b></h1>
+  </div>
+
+  <hr />
+
+  <div class="row text-center">
+    <h3 class="m-0"><%= RamSay.rand %></h3>
+  </div>
+
+  <hr />
+
+  <div class="row mt-1">
+    <h4>Operations</h4>
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>Verb</th>
+          <th>Path</th>
+          <th>Example Response / Params</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GET</td>
+          <td><code>/api</code></td>
+          <td><code>{ "ramsay": "Where's the lamb sauuuuce?!" }</code></td>
+          <td>Returns a random Ramsay quote.</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td><code>/api/add</code></td>
+          <td><code>{ "ramsay": "Some garbage you're probably going to send" }</code></td>
+          <td>Adds a new ramsay quote.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row">
+    <h4>Authentication</h4>
+    <i>None.</i>
+  </div>
+</div>
